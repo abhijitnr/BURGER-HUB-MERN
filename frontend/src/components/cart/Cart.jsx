@@ -1,10 +1,11 @@
 import cheeseBurger from "../../assets/cheese-burger.jpg";
 import vegCheeseBurger from "../../assets/veg-cheese-burger.jpg";
 import burgerFry from "../../assets/burger-fry.jpg";
+import { Link } from "react-router-dom";
 
 const CartItem = ({ value, title, image, increment, decrement }) => {
   return (
-    <div className="cartitem">
+    <div className="cartItem">
       <div>
         <h4>{title}</h4>
         <img src={image} alt={title} />
@@ -50,6 +51,30 @@ const Cart = () => {
           increment={() => increment(3)}
           decrement={() => decrement(3)}
         />
+
+        <article>
+          <div>
+            <h4>Sub Total</h4>
+            <p>₹ {2000}</p>
+          </div>
+
+          <div>
+            <h4>Tax</h4>
+            <p>₹ {2000 * 0.18}</p>
+          </div>
+
+          <div>
+            <h4>Shipping Charges</h4>
+            <p>₹ {80}</p>
+          </div>
+
+          <div>
+            <h4>Total</h4>
+            <p>₹ {2000 + 2000 * 0.18 + 80}</p>
+          </div>
+
+          <Link to="/shipping">Checkout</Link>
+        </article>
       </main>
     </section>
   );
