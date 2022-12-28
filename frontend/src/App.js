@@ -6,6 +6,7 @@ import Footer from "./components/layout/Footer";
 import Contact from "./components/contact/Contact";
 import Cart from "./components/cart/Cart";
 import Shipping from "./components/cart/Shipping";
+import ConfirmOrder from "./components/cart/ConfirmOrder";
 
 import "./styles/app.scss";
 import "./styles/header.scss";
@@ -16,6 +17,7 @@ import "./styles/footer.scss";
 import "./styles/contact.scss";
 import "./styles/cart.scss";
 import "./styles/shipping.scss";
+import "./styles/confirmOrder.scss";
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
         <Route path="/about" element={<h1>ABOUT</h1>} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/shipping" element={<Shipping />} />
+        <Route path="/confirmorder" element={<ConfirmOrder />} />
       </Routes>
 
       {/* Footer */}
