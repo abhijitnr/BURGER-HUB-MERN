@@ -1,0 +1,41 @@
+@import "colors";
+
+.founder {
+  width: 100%;
+  height: 80vh;
+  background-color: $red;
+
+  > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+
+    > img {
+      border-radius: 50%;
+    }
+
+    > h3 {
+      font-size: 1.3rem;
+      padding: 2rem 0 1rem 0;
+    }
+
+    > p {
+      letter-spacing: 3px;
+      font-size: 0.8rem;
+      font-family: cursive;
+      line-height: 200%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .founder {
+    height: 95vh;
+  }
+}
