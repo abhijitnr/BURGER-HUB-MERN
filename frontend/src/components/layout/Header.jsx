@@ -4,7 +4,7 @@ import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const Header = ({ isAuthenticated = false }) => {
+const Header = ({ isAuthenticated = true }) => {
   return (
     <nav>
       {/* Logo */}
