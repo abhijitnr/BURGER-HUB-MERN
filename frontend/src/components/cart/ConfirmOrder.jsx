@@ -1,5 +1,3 @@
-import React from "react";
-
 const ConfirmOrder = () => {
   return (
     <section className="confirmOrder">

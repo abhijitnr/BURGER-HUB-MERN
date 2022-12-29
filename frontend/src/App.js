@@ -7,6 +7,7 @@ import Contact from "./components/contact/Contact";
 import Cart from "./components/cart/Cart";
 import Shipping from "./components/cart/Shipping";
 import ConfirmOrder from "./components/cart/ConfirmOrder";
+import PaymentSuccess from "./components/cart/PaymentSuccess";
 
 import "./styles/app.scss";
 import "./styles/header.scss";
@@ -18,6 +19,7 @@ import "./styles/contact.scss";
 import "./styles/cart.scss";
 import "./styles/shipping.scss";
 import "./styles/confirmOrder.scss";
+import "./styles/paymentSuccess.scss";
 
 function App() {
   return (
@@ -32,6 +34,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/shipping" element={<Shipping />} />
         <Route path="/confirmorder" element={<ConfirmOrder />} />
+        <Route path="/paymentsuccess" element={<PaymentSuccess />} />
       </Routes>
 
       {/* Footer */}
