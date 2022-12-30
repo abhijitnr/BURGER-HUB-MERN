@@ -15,6 +15,7 @@ import OrderDetails from "./components/myOrders/OrderDetails";
 import Dashboard from "./components/admin/Dashboard";
 import Users from "./components/admin/Users";
 import Orders from "./components/admin/Orders";
+import About from "./components/about/About";
 
 import "./styles/app.scss";
 import "./styles/header.scss";
@@ -32,6 +33,7 @@ import "./styles/profile.scss";
 import "./styles/table.scss";
 import "./styles/orderDetails.scss";
 import "./styles/dashboard.scss";
+import "./styles/about.scss";
 
 function App() {
   return (
@@ -42,7 +44,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<h1>ABOUT</h1>} />
+        <Route path="/about" element={<About />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/shipping" element={<Shipping />} />
         <Route path="/confirmorder" element={<ConfirmOrder />} />

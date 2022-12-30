@@ -1,4 +1,3 @@
-import React from "react";
 import { AiOutlineEye } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { GiArmoredBoomerang } from "react-icons/gi";
