@@ -36,6 +36,7 @@ import "./styles/orderDetails.scss";
 import "./styles/dashboard.scss";
 import "./styles/about.scss";
 import "./styles/notFound.scss";
+import "./styles/loader.scss";
 
 function App() {
   return (
