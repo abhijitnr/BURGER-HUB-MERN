@@ -1,9 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Header from "./components/layout/Header";
-import Home from "./components/home/Home";
 import Footer from "./components/layout/Footer";
+import NotFound from "./components/layout/NotFound";
+import Home from "./components/home/Home";
 import Contact from "./components/contact/Contact";
+import About from "./components/about/About";
 import Cart from "./components/cart/Cart";
 import Shipping from "./components/cart/Shipping";
 import ConfirmOrder from "./components/cart/ConfirmOrder";
@@ -15,7 +17,6 @@ import OrderDetails from "./components/myOrders/OrderDetails";
 import Dashboard from "./components/admin/Dashboard";
 import Users from "./components/admin/Users";
 import Orders from "./components/admin/Orders";
-import About from "./components/about/About";
 
 import "./styles/app.scss";
 import "./styles/header.scss";
@@ -34,6 +35,7 @@ import "./styles/table.scss";
 import "./styles/orderDetails.scss";
 import "./styles/dashboard.scss";
 import "./styles/about.scss";
+import "./styles/notFound.scss";
 
 function App() {
   return (
@@ -56,6 +58,7 @@ function App() {
         <Route path="/admin/dashboard" element={<Dashboard />} />
         <Route path="/admin/orders" element={<Orders />} />
         <Route path="/admin/users" element={<Users />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       {/* Footer */}
