@@ -13,6 +13,8 @@ import Profile from "./components/profile/Profile";
 import MyOrders from "./components/myOrders/MyOrders";
 import OrderDetails from "./components/myOrders/OrderDetails";
 import Dashboard from "./components/admin/Dashboard";
+import Users from "./components/admin/Users";
+import Orders from "./components/admin/Orders";
 
 import "./styles/app.scss";
 import "./styles/header.scss";
@@ -50,6 +52,8 @@ function App() {
         <Route path="/myorders" element={<MyOrders />} />
         <Route path="/order/:id" element={<OrderDetails />} />
         <Route path="/admin/dashboard" element={<Dashboard />} />
+        <Route path="/admin/orders" element={<Orders />} />
+        <Route path="/admin/users" element={<Users />} />
       </Routes>
 
       {/* Footer */}
