@@ -1,5 +1,7 @@
-const express = require("express");
-const passport = require("passport");
+import express from "express";
+import passport from "passport";
+import { logout, myProfile } from "../controllers/user.js";
+import { isAuthenticated } from "../middlewares/auth.js";
 
 const userRoutes = express.Router();
 
@@ -11,13 +13,22 @@ userRoutes.get(
   })
 );
 
-/* REDIRECT URL */
+/* REDIRECT in Login after Google Login */
 userRoutes.get(
   "/login",
   passport.authenticate("google", {
     scope: ["profile"],
     successRedirect: process.env.FRONTEND_URL,
-  })
+  }),
+  (req, res, next) => {
+    res.send("Logged In successfully");
+  }
 );
 
-module.exports = userRoutes;
+/* GET Profile */
+userRoutes.get("/me", isAuthenticated, myProfile);
+
+/* Logout */
+userRoutes.get("/logout", logout);
+
+export default userRoutes;

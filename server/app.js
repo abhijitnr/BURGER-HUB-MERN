@@ -1,15 +1,18 @@
-const express = require("express");
-const dotenv = require("dotenv");
-const session = require("express-session");
-const passport = require("passport");
+import express, { urlencoded } from "express";
+import dotenv from "dotenv";
+import session from "express-session";
+import passport from "passport";
+import cookieParser from "cookie-parser";
+import cors from "cors";
+import { connectPassport } from "./utils/Provider.js";
+import { errorMiddleware } from "./middlewares/errorMiddleware.js";
 
-const { connectPassport } = require("./utils/Provider");
-
-const userRoutes = require("./routes/user");
+import userRoutes from "./routes/user.js";
+import orderRoutes from "./routes/order.js";
 
 const app = express();
 
-module.exports = app;
+export default app;
 
 // dotenv.config({
 //   path: "./.env",
@@ -25,6 +28,15 @@ app.use(
   })
 );
 
+app.use(cookieParser());
+app.use(express.json());
+app.use(cors());
+app.use(
+  urlencoded({
+    extended: true,
+  })
+);
+
 /* Using passport */
 app.use(passport.authenticate("session"));
 app.use(passport.initialize());
@@ -36,3 +48,7 @@ connectPassport();
 /*  ALL ROUTES */
 
 app.use("/api/v1/auth", userRoutes);
+app.use("/api/v1/order", orderRoutes);
+
+/* ERROR middleware */
+app.use(errorMiddleware);
