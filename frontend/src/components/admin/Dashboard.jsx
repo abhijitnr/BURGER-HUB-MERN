@@ -16,7 +16,7 @@ const Box = ({ title, value }) => (
 );
 
 const Dashboard = () => {
-  const loading = true;
+  const loading = false;
 
   const data = {
     labels: ["Processing", "Shipped", "Delivered"],

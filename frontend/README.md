@@ -2,7 +2,11 @@
 
 ## About
 
-This is BURGER-HUB's UI. Here is the files and folder structure, tech stack and libraries.
+This is BURGER-HUB's UI.
+
+For building the frontend, I used HTML5, CSS3, JavaScript, ReactJS, axios, Chart.js, country-state-city, framer-motion, protected-route-react, react-chartjs-2, react-hot-toast, react-icons, react-redux, react-router-dom, sass and @reduxjs/toolkit.
+
+Here is the files and folder structure, tech stack and libraries.
 
 ## Teck-Stack and Libraries
 
