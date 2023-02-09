@@ -3,7 +3,9 @@ import {
   getAdminOrders,
   getOrderDetails,
   myOrders,
+  paymentVerification,
   placeOrder,
+  placeOrderOnline,
   processingOrder,
 } from "../controllers/order.js";
 import { authorizeAdmin, isAuthenticated } from "../middlewares/auth.js";
@@ -12,6 +14,12 @@ const orderRoutes = express.Router();
 
 /* CREATE ORDER ( COD ) */
 orderRoutes.post("/create", isAuthenticated, placeOrder);
+
+/* CREATE ORDER ( ONLINE ) */
+orderRoutes.post("/create/online", isAuthenticated, placeOrderOnline);
+
+/* PAYMENT VERIFICATION */
+orderRoutes.post("/payment/verification", isAuthenticated, paymentVerification);
 
 /* MY ORDERS */
 orderRoutes.get("/myorders", isAuthenticated, myOrders);
