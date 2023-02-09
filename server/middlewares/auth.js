@@ -9,3 +9,12 @@ export const isAuthenticated = (req, res, next) => {
   }
   next();
 };
+
+/* Check logged in user is admin or not */
+export const authorizeAdmin = (req, res, next) => {
+  if (req.user.role !== "admin") {
+    return next(new ErrorHandler("Only Admin Allowed", 405));
+  }
+
+  next();
+};
